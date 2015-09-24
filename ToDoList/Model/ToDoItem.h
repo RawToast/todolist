@@ -10,10 +10,16 @@
 
 @interface ToDoItem : NSObject
 
+- (id) initFromDictionary: (NSDictionary *) dict;
+
+- (NSDictionary *) exportToDictionary;
+
+@property NSString *identifier;
+
 @property NSString *itemName;
 
 @property BOOL completed;
 
-@property (readonly) NSDate *creationDate;
+@property NSDate *creationDate;
 
 @end

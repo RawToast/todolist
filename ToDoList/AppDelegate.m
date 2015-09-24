@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CouchbaseEvents.h"
+#import "CBObjects.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,8 @@
     // Override point for customization after application launch.
     
     CouchbaseEvents* cbevents = [[CouchbaseEvents alloc] init];
-    [cbevents helloCBL];
+    
+    [ cbevents init: CBObjects.sharedInstance.database];
     
     return YES;
 }

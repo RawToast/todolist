@@ -19,6 +19,8 @@
 
 - (void) removeCompletedItems;
 
+- (void) updateCompletedStatus:(ToDoItem *) toDoItem;
+
 - (NSUInteger) count;
 
 - (ToDoItem *) itemAtIndex: (NSUInteger) index;

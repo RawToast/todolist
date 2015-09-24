@@ -130,9 +130,10 @@
  
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:false];
+    
     ToDoItem *toDoItem = [self.itemManager itemAtIndex:indexPath.row];
     
-    toDoItem.completed = !toDoItem.completed;
+    [ self.itemManager updateCompletedStatus: toDoItem ];
     
     [tableView reloadRowsAtIndexPaths:@[indexPath]
                      withRowAnimation:UITableViewRowAnimationNone];

@@ -8,9 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import <CouchbaseLite/CouchbaseLite.h>
+#import "ToDoItem.h"
 
 @interface CouchbaseEvents : NSObject
 
-- (BOOL) helloCBL;
+- (void) createDocument: (CBLDatabase *)database withItem: (ToDoItem *) toDoItem;
+
+- (void) updateToDoItem: (CBLDatabase *)database withItem: (ToDoItem *) toDoItem;
+
+- (void) deleteToDoItem: (CBLDatabase *) database item: (ToDoItem *) toDoItem;
+
+- (NSArray*) fetchItems: (CBLDatabase *) database;
+
+- (ToDoItem *) fetch: (CBLDatabase *) database item: (ToDoItem *) toDoItem;
+
+- (void) init: (CBLDatabase *) database;
 
 @end
