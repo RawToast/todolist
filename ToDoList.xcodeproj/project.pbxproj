@@ -176,7 +176,6 @@
 				38F6A2D31BB03C5C000730AC /* LaunchScreen.storyboard */,
 			);
 			name = Views;
-			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		38FB4C451BB2EE1B002B1FE4 /* Resources */ = {
