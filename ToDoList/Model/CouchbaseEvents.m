@@ -151,9 +151,9 @@ static NSString * const KEYS = @"keys";
         keys = [NSMutableArray arrayWithArray:keys];
     }
     
-    NSLog(@"Keys before addition: %d", keys.count);
+    NSLog(@"Keys before addition: %tu", keys.count);
     [ keys addObject: toDoItem.identifier ];
-    NSLog(@"Keys after addition: %d", keys.count);
+    NSLog(@"Keys after addition: %tu", keys.count);
 
     dict[KEYS] = keys;
     
@@ -178,9 +178,9 @@ static NSString * const KEYS = @"keys";
         keys = [NSMutableArray arrayWithArray:keys];
     }
     
-    NSLog(@"Keys before removal: %d", keys.count);
+    NSLog(@"Keys before removal: %tu", keys.count);
     [ keys removeObject: toDoItem.identifier ];
-    NSLog(@"Keys after removal: %d", keys.count);
+    NSLog(@"Keys after removal: %tu", keys.count);
     [ dict setObject:keys forKey:KEYS];
     
     NSError *error;
